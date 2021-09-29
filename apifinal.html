@@ -1,0 +1,64 @@
+
+<html>
+
+
+
+<body>
+
+<head>
+
+<link rel="stylesheet" href="mystyle.css">
+
+</head>
+    
+    <div id="aaa"> <strong>DYNAMO TABLE QUERY:</strong></div>
+	
+	<br>
+	
+	
+	<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Min Value</label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="min" name="minvalue" placeholder="MIN">
+      </div>
+    </div>
+	<br>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Max Value</label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="max" name="maxvalue" placeholder="MAX">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+	  <br>
+        <label for="tableDB">Dynamo Table</label>
+      </div>
+      <div class="col-75">
+        <select id="table" name="table">
+          <option value="ENVIRON">ENVIRON</option>
+          <option value="LAKES">LAKES</option>
+          <option value="ATMOSPHERE">ATMOSPHERE</option>
+        </select>
+      </div>
+    </div>
+    <br>
+	<br>
+   
+  </form>
+</div>
+
+
+
+	<button onclick="retrieve_data(document.getElementById('min').value, document.getElementById('max').value, document.getElementById('table').value)">Query Table</button>
+	
+	<script type="text/javascript" src="dynamo.js"></script>
+
+</body>
+</html>
